@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charging Intelligence: AI-Powered EV Charging & Smart Route Planner</title>
+  <meta name="description" content="Discover EV charging stations with live socket status, smart AI route planner, and seamless Apple CarPlay & Android Auto integration across Turkey and Europe!">
+  <meta name="keywords" content="EV charging station, electric vehicle, route planner, apple carplay, android auto, live sockets, ccs connector, type 2, smart navigation">
+  
+  <!-- OpenGraph & Social Cards -->
+  <meta property="og:title" content="Charging Intelligence: Smart EV Maps & Routing">
+  <meta property="og:description" content="All charging stations on a single live map. Real-time socket availability, transparent tariffs, and Apple CarPlay & Android Auto support.">
+  <meta property="og:image" content="assets/feature_graphic_1024x500.png">
+  <meta property="og:url" content="https://chargingintelligence.app">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/app_icon_512x512.png">
+  <link rel="apple-touch-icon" href="assets/app_icon_512x512.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =======================================================================
+       Header & Navigation
+       ======================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand" aria-label="Charging Intelligence Home">
+          <img src="assets/app_icon_512x512.png" alt="Charging Intelligence Logo" class="nav-logo">
+          <div class="nav-brand-text">Charging <span>Intelligence</span></div>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#features" class="nav-link" data-i18n="nav-features">Features</a></li>
+          <li><a href="#carplay" class="nav-link" data-i18n="nav-carplay">CarPlay & Android Auto</a></li>
+          <li><a href="#operators" class="nav-link" data-i18n="nav-operators">Networks</a></li>
+          <li><a href="#screenshots" class="nav-link" data-i18n="nav-screenshots">Interface</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav-faq">FAQ</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Language Switcher Pill -->
+          <div class="ctrl-pill" aria-label="Language Selector">
+            <button class="ctrl-btn lang-btn" data-lang="tr" aria-label="Türkçe">TR</button>
+            <button class="ctrl-btn lang-btn active" data-lang="en" aria-label="English">EN</button>
+          </div>
+
+          <!-- Dark/Light Theme Toggle -->
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Mobile Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       Hero Section
+       ======================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="hero-badge-dot"></span>
+            <span class="hero-badge-text" data-i18n="hero-badge">AI-Powered EV Charging & Smart Routing</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero-title-prefix">All Stations.</span><br>
+            <span class="gradient-text" data-i18n="hero-title-gradient">Smart Routing.</span><br>
+            <span data-i18n="hero-title-suffix">Zero Range Anxiety.</span>
+          </h1>
+
+          <p class="hero-description" data-i18n="hero-desc">
+            Discover all licensed EV charging stations across Turkey and Europe on a single live map with real-time socket availability, transparent tariff comparisons, AI-powered route optimization, and Apple CarPlay & Android Auto.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="btn btn-store" id="cta-apple-download">
+              <svg viewBox="0 0 170 170" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.07-7.66-7.83-11.87-14.28-5.55-8.49-9.87-17.65-12.98-27.49-3.11-9.83-4.66-19.34-4.66-28.53 0-14.38 3.59-26.24 10.77-35.59 7.18-9.35 16.27-14.15 27.27-14.42 4.14 0 8.89 1.13 14.26 3.39 5.37 2.26 9.17 3.44 11.39 3.55 1.74 0 5.69-1.29 11.86-3.87 6.17-2.58 11.19-3.72 15.07-3.44 14.7.74 25.75 6.46 33.15 17.16-12.87 7.78-19.19 18.36-18.96 31.73.23 10.45 4.14 19.14 11.72 26.06 7.58 6.92 16.48 10.97 26.7 12.16-2.22 6.75-4.83 13.51-7.84 20.28zM119.22 31.84c0-7.39 2.65-14.48 7.95-21.27 5.3-6.79 12.06-10.74 20.27-11.85.12 1.09.18 1.94.18 2.55 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.29 10.47-20.49 11.57-.06-.5-.12-1.17-.18-2z"/></svg>
+              <div class="btn-store-text">
+                <small data-i18n="hero-store-apple-sub">Download on the</small>
+                <strong data-i18n="hero-store-apple-main">App Store</strong>
+              </div>
+            </a>
+
+            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-store" id="cta-google-download">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#4285F4" d="M47 38.8C42.8 45.3 40 54 40 64v384c0 10 2.8 18.7 7 25.2L270.9 256 47 38.8z"/><path fill="#FBBC04" d="M424.3 226.7L385.4 204l-60.1 60.1 60.1 60.1 39.4-22.9c14.6-8.5 24.3-24.3 24.3-42.3 0-18-9.7-33.8-24.8-42.3z"/><path fill="#34A853" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <div class="btn-store-text">
+                <small data-i18n="hero-store-google-sub">Get it on</small>
+                <strong data-i18n="hero-store-google-main">Google Play</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-badges-row">
+            <div class="hero-badge-item">
+              <span>✓</span> <strong data-i18n="hero-carplay-ready">Apple CarPlay & Android Auto Ready</strong>
+            </div>
+            <div class="hero-badge-item">
+              <span>✓</span> <strong data-i18n="hero-all-ev-compat">100% Compatible with All EVs</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Mockup -->
+        <div class="hero-visual">
+          <div class="hero-image-wrap">
+            <!-- Authentic iPhone Mockup from Reference Photo -->
+            <div class="hero-phone-container">
+              <img src="assets/hero_iphone_mockup.png" alt="Charging Intelligence on iPhone" class="hero-mockup-img" loading="eager">
+            </div>
+
+            <!-- Floating Telemetry Card 1 -->
+            <div class="floating-card floating-card-1" aria-hidden="true">
+              <div class="card-icon-badge">⚡</div>
+              <div class="card-info">
+                <strong data-i18n="badge-ccs">CCS 180 kW DC</strong>
+                <small data-i18n="badge-avail">Live Sockets: 3/4 Free</small>
+              </div>
+            </div>
+
+            <!-- Floating Telemetry Card 2 -->
+            <div class="floating-card floating-card-2" aria-hidden="true">
+              <div class="card-icon-badge cyan">🚗</div>
+              <div class="card-info">
+                <strong data-i18n="badge-carplay">CarPlay & Android Auto</strong>
+                <small data-i18n="badge-carplay-sub">In-Car Navigation Active</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       Stats Section
+       ======================================================================= -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" id="stat-counter-sockets" data-target="350000" data-suffix="+" data-i18n="stat-stations">350,000+</div>
+          <div class="stat-label" data-i18n="stat-stations-label">Live Charging Sockets</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number emerald" id="stat-counter-dc" data-target="85000" data-suffix="+" data-i18n="stat-dc">85,000+</div>
+          <div class="stat-label" data-i18n="stat-dc-label">Fast DC Chargers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number cyan" id="stat-counter-operators" data-target="1186" data-suffix="+" data-i18n="stat-operators">1,186+</div>
+          <div class="stat-label" data-i18n="stat-operators-label">EV Charging Networks</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number amber" id="stat-counter-countries" data-target="250" data-suffix="+" data-i18n="stat-countries">250+</div>
+          <div class="stat-label" data-i18n="stat-countries-label">Countries Covered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="stat-counter-compat" data-target="100" data-prefix-tr="%" data-suffix-en="%" data-i18n="stat-compat">100%</div>
+          <div class="stat-label" data-i18n="stat-compat-label">Compatible with All EVs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       Features Section
+       ======================================================================= -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="features-tag">Intelligent Capabilities</span>
+        <h2 class="section-title" data-i18n="features-title">The Future of Electric Driving at Your Fingertips</h2>
+        <p class="section-desc" data-i18n="features-desc">Charging Intelligence puts an end to juggling dozens of separate charging apps.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🗺️</div>
+          <h3 class="feature-title" data-i18n="feat-1-title">All Networks on One Map</h3>
+          <p class="feature-text" data-i18n="feat-1-desc">Explore major European CPOs like IONITY, Fastned, EnBW, Tesla Supercharger, TotalEnergies, and Allego alongside ZES, Trugo, Eşarj, and 1,180+ charging networks with live availability on a unified map.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🚗</div>
+          <h3 class="feature-title" data-i18n="feat-2-title">Apple CarPlay & Android Auto</h3>
+          <p class="feature-text" data-i18n="feat-2-desc">Connect directly to your vehicle's dashboard. Find nearby free chargers and start turn-by-turn navigation with a single tap whether you're using iPhone or Android.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🧠</div>
+          <h3 class="feature-title" data-i18n="feat-3-title">AI-Powered Routing Engine</h3>
+          <p class="feature-text" data-i18n="feat-3-desc">Enter your destination and battery level; our algorithm calculates optimal charging stops, wait durations, and battery states in seconds.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">💰</div>
+          <h3 class="feature-title" data-i18n="feat-4-title">Real-Time Tariff Comparison</h3>
+          <p class="feature-text" data-i18n="feat-4-desc">Compare per-kWh pricing across AC and DC connectors in real time and choose the most cost-effective station for your budget.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🔌</div>
+          <h3 class="feature-title" data-i18n="feat-5-title">Advanced Connector Filtering</h3>
+          <p class="feature-text" data-i18n="feat-5-desc">Filter by connector types (Type 2, CCS, CHAdeMO) and power ratings from 22 kW up to 300 kW+ ultra-fast DC chargers.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🎙️</div>
+          <h3 class="feature-title" data-i18n="feat-6-title">Intelligent Voice Search</h3>
+          <p class="feature-text" data-i18n="feat-6-desc">Search hands-free using natural voice recognition before heading out or on the move. Find 'nearest fast DC charger' or 'available stations on route' effortlessly and launch navigation instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       In-Car Systems: Apple CarPlay & Android Auto Section
+       ======================================================================= -->
+  <section class="section carplay-section" id="carplay">
+    <div class="container">
+      <div class="carplay-grid">
+        <div class="carplay-content">
+          <div class="carplay-badges">
+            <span class="pill-badge highlight-apple">
+              <svg viewBox="0 0 170 170" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.07-7.66-7.83-11.87-14.28-5.55-8.49-9.87-17.65-12.98-27.49-3.11-9.83-4.66-19.34-4.66-28.53 0-14.38 3.59-26.24 10.77-35.59 7.18-9.35 16.27-14.15 27.27-14.42 4.14 0 8.89 1.13 14.26 3.39 5.37 2.26 9.17 3.44 11.39 3.55 1.74 0 5.69-1.29 11.86-3.87 6.17-2.58 11.19-3.72 15.07-3.44 14.7.74 25.75 6.46 33.15 17.16-12.87 7.78-19.19 18.36-18.96 31.73.23 10.45 4.14 19.14 11.72 26.06 7.58 6.92 16.48 10.97 26.7 12.16-2.22 6.75-4.83 13.51-7.84 20.28zM119.22 31.84c0-7.39 2.65-14.48 7.95-21.27 5.3-6.79 12.06-10.74 20.27-11.85.12 1.09.18 1.94.18 2.55 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.29 10.47-20.49 11.57-.06-.5-.12-1.17-.18-2z"/></svg>
+              <span>Apple CarPlay™</span>
+            </span>
+            <span class="pill-badge highlight-android">
+              <svg viewBox="0 0 2751 2814" width="15" height="15" aria-hidden="true"><path fill="#03A9F4" fill-rule="evenodd" d="M187.6 2438.4C84 2438.4 0 2354.4 0 2250.8c0-34.1 9.1-66.1 25.1-93.6L1213 94c32.2-56.1 92.9-94 162.4-94s130.2 37.9 162.5 94l1188 2063.2c16 27.5 25.1 59.5 25.1 93.6c0 103.6-84 187.6-187.6 187.6H187.6z"/><path fill="#039BE5" fill-rule="evenodd" d="M1212.9 94L25.1 2157.1c-16 27.5-25.1 59.5-25.1 93.6c0 103.6 84 187.6 187.6 187.6h1188V0c-69.5 0-130.2 37.9-162.5 94z"/><path fill="#F1F1F1" fill-rule="evenodd" d="M1375.4 875.3L2438.2 2751l-62.6 62.6-1000.4-375.1-1000.2 375-62.6-62.6L1375.4 875.3z"/><path fill="#E1E1E1" fill-rule="evenodd" d="M1375.4 875.3L2438.2 2751l-62.6 62.6-1000.4-375.1"/></svg>
+              <span>Android Auto™</span>
+            </span>
+            <span class="pill-badge" data-i18n="carplay-tag">Certified In-Car Experience</span>
+          </div>
+
+          <h2 class="section-title" data-i18n="carplay-title">Stay in Control on the Road: Apple CarPlay & Android Auto</h2>
+          <p class="section-desc" data-i18n="carplay-desc">Charging Intelligence is fully integrated with Apple CarPlay and Android Auto in-car platforms. Without taking your eyes off the road or touching your phone:</p>
+
+          <ul class="carplay-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="cp-item-1">View real-time socket availability directly on your car screen</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="cp-item-2">Launch one-tap turn-by-turn navigation to the nearest fast DC charger</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="cp-item-3">Hands-free voice control with Siri & Google Assistant</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="cp-item-4">Safe automotive interface certified for distraction-free driving</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+              <svg viewBox="0 0 170 170" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.07-7.66-7.83-11.87-14.28-5.55-8.49-9.87-17.65-12.98-27.49-3.11-9.83-4.66-19.34-4.66-28.53 0-14.38 3.59-26.24 10.77-35.59 7.18-9.35 16.27-14.15 27.27-14.42 4.14 0 8.89 1.13 14.26 3.39 5.37 2.26 9.17 3.44 11.39 3.55 1.74 0 5.69-1.29 11.86-3.87 6.17-2.58 11.19-3.72 15.07-3.44 14.7.74 25.75 6.46 33.15 17.16-12.87 7.78-19.19 18.36-18.96 31.73.23 10.45 4.14 19.14 11.72 26.06 7.58 6.92 16.48 10.97 26.7 12.16-2.22 6.75-4.83 13.51-7.84 20.28zM119.22 31.84c0-7.39 2.65-14.48 7.95-21.27 5.3-6.79 12.06-10.74 20.27-11.85.12 1.09.18 1.94.18 2.55 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.29 10.47-20.49 11.57-.06-.5-.12-1.17-.18-2z"/></svg>
+              <span>App Store</span>
+            </a>
+            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-store" style="display: inline-flex; align-items: center; gap: 8px;">
+              <svg viewBox="0 0 512 512" width="16" height="16" aria-hidden="true"><path fill="#EA4335" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#4285F4" d="M47 38.8C42.8 45.3 40 54 40 64v384c0 10 2.8 18.7 7 25.2L270.9 256 47 38.8z"/><path fill="#FBBC04" d="M424.3 226.7L385.4 204l-60.1 60.1 60.1 60.1 39.4-22.9c14.6-8.5 24.3-24.3 24.3-42.3 0-18-9.7-33.8-24.8-42.3z"/><path fill="#34A853" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span>Google Play</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="carplay-visual">
+          <div class="carplay-visual-box">
+            <img src="assets/feature_graphic_1024x500.png" alt="Apple CarPlay and Android Auto EV Dashboard Experience" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       Operators Strip Section
+       ======================================================================= -->
+  <section class="section" id="operators" style="padding: 70px 0;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag" data-i18n="operators-tag">Broad Coverage</span>
+      <h2 class="section-title" data-i18n="operators-title">Supported Charging Networks</h2>
+      <p class="section-desc" data-i18n="operators-desc">All licensed operators are synced continuously with real-time status.</p>
+
+      <div class="operators-strip">
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/teslasupercharger.png" alt="Tesla Supercharger" loading="lazy">
+          <span>Tesla Supercharger</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/ionity.png" alt="IONITY" loading="lazy">
+          <span>IONITY</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/fastned.png" alt="Fastned" loading="lazy">
+          <span>Fastned</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/enbw.png" alt="EnBW" loading="lazy">
+          <span>EnBW</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/allego.png" alt="Allego" loading="lazy">
+          <span>Allego</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/shellrecharge.png" alt="Shell Recharge" loading="lazy">
+          <span>Shell Recharge</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/bppulse.png" alt="BP Pulse" loading="lazy">
+          <span>BP Pulse</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/enelx.png" alt="Enel X" loading="lazy">
+          <span>Enel X</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/zes.png" alt="ZES" loading="lazy">
+          <span>ZES</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/trugo.png" alt="Trugo" loading="lazy">
+          <span>Trugo</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/esarj.png" alt="Eşarj" loading="lazy">
+          <span>Eşarj</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/voltrun.png" alt="Voltrun" loading="lazy">
+          <span>Voltrun</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/watmobilite.png" alt="Wat Mobilite" loading="lazy">
+          <span>Wat Mobilite</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/astor.png" alt="Astor Şarj" loading="lazy">
+          <span>Astor Şarj</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/enyakit.png" alt="En Yakıt" loading="lazy">
+          <span>En Yakıt</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/beefull.png" alt="Beefull" loading="lazy">
+          <span>Beefull</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/otojet.png" alt="Otojet" loading="lazy">
+          <span>Otojet</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/oncharge.png" alt="Oncharge" loading="lazy">
+          <span>Oncharge</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/sharz.png" alt="Sharz.net" loading="lazy">
+          <span>Sharz.net</span>
+        </div>
+        <div class="operator-badge">
+          <img class="cpo-logo-img" src="assets/cpo_logos/otopriz.png" alt="Otopriz" loading="lazy">
+          <span>Otopriz</span>
+        </div>
+        <div class="operator-badge more-badge">
+          <span style="font-size: 1.1rem;">⚡</span>
+          <span data-i18n="operators-more">+1,180 More Global Networks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       Screenshots Gallery Section
+       ======================================================================= -->
+  <section class="section" id="screenshots" style="background: var(--bg-surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="screenshots-tag">Interface</span>
+        <h2 class="section-title" data-i18n="screenshots-title">Clean, Fluid, and Intuitive</h2>
+        <p class="section-desc" data-i18n="screenshots-desc">Carefully tuned dark mode and seamless gesture controls.</p>
+      </div>
+
+      <div class="screenshots-slider-wrap">
+        <div class="screenshots-track" id="screenshots-track">
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="0"><img src="assets/screenshots/OTP Screen.png" alt="OTP Screen" loading="lazy"></div>
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="1"><img src="assets/screenshots/Connenting Screen.png" alt="Connecting Screen" loading="lazy"></div>
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="2"><img src="assets/screenshots/Search Screenshots.png" alt="Search Screenshots" loading="lazy"></div>
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="3"><img src="assets/screenshots/Map Screen.png" alt="Map Screen" loading="lazy"></div>
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="4"><img src="assets/screenshots/Map EU Screen.png" alt="Map EU Screen" loading="lazy"></div>
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="5"><img src="assets/screenshots/Connect EV Screen.png" alt="Connect EV Screen" loading="lazy"></div>
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="6"><img src="assets/screenshots/My Vehicle Screen .png" alt="My Vehicle Screen" loading="lazy"></div>
+          <div class="screenshot-slide" role="button" tabindex="0" data-gallery-index="7"><img src="assets/screenshots/Profile screen.png" alt="Profile Screen" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       FAQ Section
+       ======================================================================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="faq-tag">Frequently Asked Questions</span>
+        <h2 class="section-title" data-i18n="faq-title">Got Questions? We've Got Answers.</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq-q1">Which vehicles are supported?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq-a1">Charging Intelligence supports all EVs and plug-in hybrids including Tesla, Togg, BMW, Mercedes-Benz, Renault, Hyundai, Porsche, MG, BYD, Volvo, Audi, and more.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq-q2">How do I use Apple CarPlay & Android Auto?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq-a2">Simply connect your smartphone (iPhone or Android) to your vehicle display via USB cable or wireless projection. Charging Intelligence will automatically launch on your in-car dashboard.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq-q3">How frequently are charging prices updated?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq-a3">Official tariff announcements from licensed operators are synchronized continuously and reflected on the map in real time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq-q4">Is the app free to use?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq-a4">Yes! Charging Intelligence can be downloaded for free from the App Store and Google Play, with full access to live maps and essential station discovery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       Call to Action Banner
+       ======================================================================= -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2 data-i18n="cta-title">Power Your Journeys with Smart Energy</h2>
+      <p data-i18n="cta-desc">Download Charging Intelligence today and leave range anxiety in the rear-view mirror.</p>
+
+      <div class="cta-store-buttons">
+        <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="cta-apple-bottom" style="padding: 14px 32px; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px;">
+          <svg viewBox="0 0 170 170" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.07-7.66-7.83-11.87-14.28-5.55-8.49-9.87-17.65-12.98-27.49-3.11-9.83-4.66-19.34-4.66-28.53 0-14.38 3.59-26.24 10.77-35.59 7.18-9.35 16.27-14.15 27.27-14.42 4.14 0 8.89 1.13 14.26 3.39 5.37 2.26 9.17 3.44 11.39 3.55 1.74 0 5.69-1.29 11.86-3.87 6.17-2.58 11.19-3.72 15.07-3.44 14.7.74 25.75 6.46 33.15 17.16-12.87 7.78-19.19 18.36-18.96 31.73.23 10.45 4.14 19.14 11.72 26.06 7.58 6.92 16.48 10.97 26.7 12.16-2.22 6.75-4.83 13.51-7.84 20.28zM119.22 31.84c0-7.39 2.65-14.48 7.95-21.27 5.3-6.79 12.06-10.74 20.27-11.85.12 1.09.18 1.94.18 2.55 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.29 10.47-20.49 11.57-.06-.5-.12-1.17-.18-2z"/></svg>
+          <span>Download on the App Store</span>
+        </a>
+        <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-store" id="cta-google-bottom" style="padding: 14px 32px; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px;">
+          <svg viewBox="0 0 512 512" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#4285F4" d="M47 38.8C42.8 45.3 40 54 40 64v384c0 10 2.8 18.7 7 25.2L270.9 256 47 38.8z"/><path fill="#FBBC04" d="M424.3 226.7L385.4 204l-60.1 60.1 60.1 60.1 39.4-22.9c14.6-8.5 24.3-24.3 24.3-42.3 0-18-9.7-33.8-24.8-42.3z"/><path fill="#34A853" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+          <span>Get it on Google Play</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       Footer
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <img src="assets/app_icon_512x512.png" alt="Charging Intelligence Logo" class="nav-logo">
+            <div class="nav-brand-text">Charging <span>Intelligence</span></div>
+          </div>
+          <p data-i18n="footer-brand-desc">Next-generation smart EV charging companion and route planning platform.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer-col-quick">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#features" data-i18n="nav-features">Features</a></li>
+            <li><a href="#carplay" data-i18n="nav-carplay">CarPlay & Android Auto</a></li>
+            <li><a href="#operators" data-i18n="nav-operators">Networks</a></li>
+            <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer-col-legal">Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="terms-of-use.html" data-i18n="nav-terms">Terms of Use (EULA)</a></li>
+            <li><a href="privacy.html" data-i18n="nav-privacy">Privacy Policy</a></li>
+            <li><a href="support.html#delete-account" data-i18n="footer-delete-account">Delete Account Request</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer-col-contact">Contact & Support</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:support@chargingintelligence.app">support@chargingintelligence.app</a></li>
+            <li><a href="support.html" data-i18n="nav-support">Support Center</a></li>
+            <li><span>📍 Istanbul, Turkey</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Charging Intelligence. <span data-i18n="footer-rights">All rights reserved.</span></div>
+        <div class="footer-legal-links">
+          <a href="terms-of-use.html">EULA</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       Screenshot Gallery Lightbox Dialog
+       ======================================================================= -->
+  <dialog id="gallery-dialog" class="gallery-dialog" closedby="any" aria-label="Screenshot Gallery Lightbox">
+    <div class="gallery-dialog-wrapper" id="gallery-wrapper">
+      <button type="button" class="gallery-close-btn" id="gallery-close-btn" aria-label="Close Gallery">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <button type="button" class="gallery-nav-btn prev" id="gallery-prev-btn" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <div class="gallery-main-view" id="gallery-main-view">
+        <img id="gallery-active-img" src="" alt="Active Screenshot" class="gallery-active-img">
+        <div class="gallery-caption-bar">
+          <span id="gallery-caption-text" class="gallery-caption-text"></span>
+          <span id="gallery-counter" class="gallery-counter">1 / 7</span>
+        </div>
+      </div>
+
+      <button type="button" class="gallery-nav-btn next" id="gallery-next-btn" aria-label="Next image">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="js/stats-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
