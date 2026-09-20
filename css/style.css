@@ -187,8 +187,19 @@ img {
   box-shadow: 0 6px 18px var(--brand-primary-glow);
 }
 
+.nav-brand-text {
+  color: var(--brand-primary);
+  transition: color var(--transition-fast), text-shadow var(--transition-fast), filter var(--transition-fast);
+}
+
 .nav-brand-text span {
   color: var(--brand-primary);
+}
+
+.nav-brand:hover .nav-brand-text {
+  color: var(--brand-primary);
+  text-shadow: 0 4px 14px rgba(232, 37, 32, 0.65), 0 8px 24px rgba(232, 37, 32, 0.4);
+  filter: drop-shadow(0 4px 10px rgba(232, 37, 32, 0.45));
 }
 
 .nav-menu {
