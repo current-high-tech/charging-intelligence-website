@@ -24,7 +24,7 @@ const i18nData = {
     "hero-title-prefix": "Tüm İstasyonlar.",
     "hero-title-gradient": "Akıllı Rota.",
     "hero-title-suffix": "Sıfır Menzil Kaygısı.",
-    "hero-desc": "Türkiye ve Avrupa'daki tüm lisanslı elektrikli araç şarj istasyonlarını canlı soket dolulukları, anlık tarife karşılaştırması, yapay zekâ rota planlaması ve Apple CarPlay & Android Auto desteği ile keşfedin.",
+    "hero-desc": "Türkiye ve Avrupa'daki tüm lisanslı elektrikli araç şarj istasyonlarını canlı soket dolulukları, anlık tarife karşılaştırması, yapay zekâ rota planlaması ve Apple CarPlay & Android Auto desteği ile keşfedin.<br><br><b>Siz nereye gitmek istediğinizi söyleyin, gerisini The Charging Intelligence halleder.</b>",
     "hero-store-apple-sub": "Hemen İndirin",
     "hero-store-apple-main": "App Store",
     "hero-store-google-sub": "Ücretsiz Edinin",
@@ -59,13 +59,15 @@ const i18nData = {
     "feat-2-title": "Apple CarPlay & Android Auto",
     "feat-2-desc": "Aracınızın ekranına doğrudan bağlanın. İster iPhone ister Android kullanın; sürüş esnasında dikkatinizi yoldan ayırmadan en yakın boş şarj istasyonuna tek dokunuşla rota oluşturun.",
     "feat-3-title": "AI Destekli Rota Motoru",
-    "feat-3-desc": "Varış noktanızı ve batarya seviyenizi girin; algoritma en hesaplı ve optimum şarj duraklarını, bekleme sürelerini saniyeler içinde hesaplasın.",
+    "feat-3-desc": "Varış noktanızı girin; CI: The Charging Intelligence'ın benzersiz yapay zekası elektrikli aracınızın, istasyonların, yolun, havanın ve trafiğin durumuna göre en uygun istasyona karar verir ve rotayı dinamik olarak optimize eder.",
     "feat-4-title": "Canlı Tarife Karşılaştırması",
     "feat-4-desc": "AC ve DC soket fiyatlarını kWh bazında anlık karşılaştırın, bütçenize en uygun istasyonu kolayca seçin.",
     "feat-5-title": "Gelişmiş Soket Filtreleme",
     "feat-5-desc": "Tip 2, CCS, CHAdeMO soketlerine ve 22 kW'tan 300 kW+ ultra hızlı DC güç aralıklarına göre anında filtreleme yapın.",
     "feat-6-title": "Akıllı Sesli Arama",
-    "feat-6-desc": "Yola çıkmadan önce veya sürüş esnasında mikrofon simgesine dokunarak doğal dille arama yapın. 'En yakın hızlı DC şarj', 'rotam üzerindeki boş istasyonlar' gibi sesli komutlarla eller serbest arama yapın ve tek dokunuşla rotanızı başlatın.",
+    "feat-6-desc": "Yola çıkmadan önce veya sürüş esnasında doğal ses tanıma ile eller serbest arama yapın. 'En yakın hızlı DC şarj cihazı' veya 'rotam üzerindeki boş istasyonlar' diyerek navigasyonu anında başlatın.",
+    "feat-7-title": "Elektrikli Araç Bağlantısı",
+    "feat-7-desc": "Aracınızı uygulamaya güvenli bir şekilde bağlayarak anlık batarya durumu, kalan menzil ve şarj verilerini canlı takip edin. Yapay zeka destekli rota motoru, bu verilerle en hassas menzil hesaplamasını yapsın.",
 
     // CarPlay & Android Auto Section
     "carplay-tag": "Araç İçi Sistemler (In-Car)",
@@ -102,6 +104,8 @@ const i18nData = {
     // CTA Section
     "cta-title": "Yolculuklarınızı Akıllı Enerjiyle Güçlendirin",
     "cta-desc": "Charging Intelligence uygulamasını şimdi indirin, menzil kaygısını geride bırakın.",
+    "cta-btn-apple": "App Store'dan İndirin",
+    "cta-btn-google": "Google Play'den Edinin",
 
     // Footer
     "footer-brand-desc": "Elektrikli araç sürücüleri için akıllı şarj ağı ve rota planlama platformu.",
@@ -128,7 +132,7 @@ const i18nData = {
     "hero-title-prefix": "All Stations.",
     "hero-title-gradient": "Smart Routing.",
     "hero-title-suffix": "Zero Range Anxiety.",
-    "hero-desc": "Discover all licensed EV charging stations across Turkey and Europe on a single live map with real-time socket availability, transparent tariff comparisons, AI-powered route optimization, and Apple CarPlay & Android Auto.",
+    "hero-desc": "Discover all licensed EV charging stations across Turkey and Europe on a single live map with real-time socket availability, transparent tariff comparisons, AI-powered route optimization, and Apple CarPlay & Android Auto.<br><br><b>Just tell us where to go. The Charging Intelligence handles the rest.</b>",
     "hero-store-apple-sub": "Download on the",
     "hero-store-apple-main": "App Store",
     "hero-store-google-sub": "Get it on",
@@ -163,13 +167,15 @@ const i18nData = {
     "feat-2-title": "Apple CarPlay & Android Auto",
     "feat-2-desc": "Connect seamlessly to your car's dashboard display. Whether on iPhone or Android, explore nearby live chargers and start turn-by-turn routing with zero driving distraction.",
     "feat-3-title": "AI-Powered Routing Engine",
-    "feat-3-desc": "Enter your destination and battery level; our algorithm calculates optimal charging stops, wait durations, and battery states in seconds.",
+    "feat-3-desc": "Enter your destination; CI: The Charging Intelligence's unique AI decides on the most suitable station and dynamically optimizes the route based on the status of your electric vehicle, stations, road, weather, and traffic.",
     "feat-4-title": "Real-Time Tariff Comparison",
     "feat-4-desc": "Compare per-kWh pricing across AC and DC connectors in real time and choose the most cost-effective station for your budget.",
     "feat-5-title": "Advanced Connector Filtering",
     "feat-5-desc": "Filter by connector types (Type 2, CCS, CHAdeMO) and power ratings from 22 kW up to 300 kW+ ultra-fast DC chargers.",
     "feat-6-title": "Intelligent Voice Search",
     "feat-6-desc": "Search hands-free using natural voice recognition before heading out or on the move. Find 'nearest fast DC charger' or 'available stations on route' effortlessly and launch navigation instantly.",
+    "feat-7-title": "Direct EV Connection",
+    "feat-7-desc": "Securely link your electric vehicle to monitor real-time battery status, remaining range, and charging data. Leverage live telemetry for the most precise AI-powered route planning.",
 
     // CarPlay & Android Auto Section
     "carplay-tag": "Automotive In-Car Display",
@@ -206,6 +212,8 @@ const i18nData = {
     // CTA Section
     "cta-title": "Power Your Journeys with Smart Energy",
     "cta-desc": "Download Charging Intelligence today and leave range anxiety in the rear-view mirror.",
+    "cta-btn-apple": "Download on the App Store",
+    "cta-btn-google": "Get it on Google Play",
 
     // Footer
     "footer-brand-desc": "Next-generation smart EV charging companion and route planning platform.",
@@ -452,7 +460,7 @@ function setLanguage(lang) {
     }
     const key = el.getAttribute('data-i18n');
     if (i18nData[lang][key]) {
-      el.textContent = i18nData[lang][key];
+      el.innerHTML = i18nData[lang][key];
     }
   });
 
