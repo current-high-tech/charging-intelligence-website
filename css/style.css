@@ -1533,3 +1533,24 @@ dialog.gallery-dialog::backdrop {
 /* Language Display Control */
 html[lang="tr"] [lang="en"] { display: none !important; }
 html[lang="en"] [lang="tr"] { display: none !important; }
+
+/* Fix overlap on very small screens */
+@media (max-width: 480px) {
+  .nav-brand-text span {
+    display: none; /* Hide "Intelligence" on small screens to save space */
+  }
+  .nav-brand-text {
+    font-size: 1rem;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .nav-actions .btn-store {
+    padding: 4px 8px !important;
+    font-size: 0.75rem !important;
+  }
+  .nav-logo {
+    width: 32px;
+    height: 32px;
+  }
+}
