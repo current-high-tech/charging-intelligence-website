@@ -18,6 +18,10 @@ const i18nData = {
     "nav-terms": "Kullanım Koşulları",
     "nav-privacy": "Gizlilik Politikası",
     "nav-support": "Destek",
+    "nav-home": "← Ana Sayfa",
+    "page-title-terms": "Kullanım Koşulları",
+    "page-title-privacy": "Gizlilik Politikası",
+    "page-date": "Son Güncelleme: 20 Eylül 2026",
 
     // Hero Section
     "hero-badge": "Yapay Zekâ Destekli Şarj & Rota",
@@ -126,6 +130,10 @@ const i18nData = {
     "nav-terms": "Terms of Use",
     "nav-privacy": "Privacy Policy",
     "nav-support": "Support",
+    "nav-home": "← Home",
+    "page-title-terms": "Terms of Use",
+    "page-title-privacy": "Privacy Policy",
+    "page-date": "Last Updated: September 20, 2026",
 
     // Hero Section
     "hero-badge": "AI-Powered EV Charging & Smart Routing",

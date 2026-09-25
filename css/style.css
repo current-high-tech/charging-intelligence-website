@@ -1529,3 +1529,7 @@ dialog.gallery-dialog::backdrop {
     padding: 24px;
   }
 }
+
+/* Language Display Control */
+html[lang="tr"] [lang="en"] { display: none !important; }
+html[lang="en"] [lang="tr"] { display: none !important; }

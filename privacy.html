@@ -20,8 +20,12 @@
           <div class="nav-brand-text">Charging <span>Intelligence</span></div>
         </a>
 
-        <div class="nav-actions">
-          <a href="index.html" class="btn btn-store" style="padding: 6px 14px; font-size: 0.85rem;">
+                <div class="nav-actions">
+          <div class="ctrl-pill">
+            <button class="ctrl-btn lang-btn" data-lang="tr" aria-label="Türkçe">TR</button>
+            <button class="ctrl-btn lang-btn active" data-lang="en" aria-label="English">EN</button>
+          </div>
+          <a href="index.html" class="btn btn-store" style="padding: 6px 14px; font-size: 0.85rem;" data-i18n="nav-home">
             ← Home
           </a>
           <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
@@ -37,11 +41,13 @@
     <div class="legal-container">
       <header class="legal-page-header">
         <span class="legal-badge">KVKK & GDPR Compliant</span>
-        <h1>Gizlilik Politikası (Privacy Policy)</h1>
-        <p style="color: var(--text-dim); margin-top: 8px;">Son Güncelleme: 20 Eylül 2026</p>
+        <h1 data-i18n="page-title-privacy">Gizlilik Politikası</h1>
+        <p style="color: var(--text-dim); margin-top: 8px;" data-i18n="page-date">Son Güncelleme: 20 Eylül 2026</p>
       </header>
 
       <div class="legal-content">
+        <!-- TR CONTENT -->
+        <div lang="tr">
         <p>
           Charging Intelligence olarak kullanıcılarımızın gizliliğine ve kişisel verilerinin güvenliğine en üst düzeyde önem veriyoruz. Bu Gizlilik Politikası, mobil uygulamamızı ("Uygulama") ve web sitemizi kullanırken toplanan, işlenen ve korunan veriler hakkında sizleri bilgilendirmek amacıyla hazırlanmıştır.
         </p>
@@ -86,6 +92,56 @@
           📧 <strong>E-posta:</strong> <a href="mailto:support@chargingintelligence.app" style="color: var(--brand-primary);">support@chargingintelligence.app</a><br>
           🌐 <strong>Web:</strong> <a href="https://chargingintelligence.app" style="color: var(--brand-primary);">https://chargingintelligence.app</a>
         </p>
+        </div>
+
+        <!-- EN CONTENT -->
+        <div lang="en">
+          <p>
+            At Charging Intelligence, we prioritize your privacy and the security of your personal data. This Privacy Policy is prepared to inform you about the data collected, processed, and protected while using our mobile application ("App") and website.
+          </p>
+
+          <h2>1. Information Collected and Purposes of Use</h2>
+          <p>The following data may be processed for our app to provide its core functions:</p>
+          <ul>
+            <li><strong>Location Data (Precise / Approximate Location):</strong> Your device's GPS location data is used to show you the nearest electric vehicle charging stations on the map, calculate distances, and operate Apple CarPlay & Android Auto navigation. Your location data is not shared with third parties and is not stored on our servers for trip tracking purposes.</li>
+            <li><strong>Device and Diagnostics Information:</strong> Anonymized device model, operating system version, and crash reports may be collected to monitor app performance, detect crashes, and improve the user experience.</li>
+            <li><strong>User Preferences:</strong> Your favorite stations, filter selections (socket type, minimum kW power, etc.) are stored locally on your device or securely in our Firebase infrastructure if you are logged in.</li>
+          </ul>
+
+          <h2>2. Apple CarPlay & Android Auto Permissions</h2>
+          <p>
+            When using Apple CarPlay and Android Auto in-car systems, the App receives only the minimum telemetry information required from the vehicle multimedia system for driving and map display. No microphone or personal data is recorded through the vehicle systems.
+          </p>
+
+          <h2>3. Data Security</h2>
+          <p>
+            All data communications are encrypted with the latest SSL/TLS (HTTPS) protocols. Our server infrastructure is hosted in highly secure data centers that comply with international security standards (ISO 27001, SOC2).
+          </p>
+
+          <h2>4. Third-Party Integrations</h2>
+          <p>
+            Our app may use reliable map libraries such as Apple Maps, Google Maps, or Mapbox for map rendering operations and background services. These services are subject to their own privacy standards.
+          </p>
+
+          <h2>5. User Rights and Account Deletion</h2>
+          <p>
+            Under KVKK and GDPR; you have the right to access your data, request correction, and request the permanent deletion of your account and all data registered with it at any time.
+          </p>
+          <div class="legal-card-info">
+            <strong>Account and Data Deletion Request:</strong><br>
+            To delete your account and data, you can visit our <a href="support.html#delete-account" style="color: var(--brand-primary); text-decoration: underline;">Account Deletion Request</a> page or send an email directly to <a href="mailto:support@chargingintelligence.app" style="color: var(--brand-primary);">support@chargingintelligence.app</a>. Your request will be processed within 48 hours at the latest.
+          </div>
+
+          <h2>6. Contact Information</h2>
+          <p>
+            For your questions regarding our privacy policy or personal data, you can contact our Data Controller team:
+          </p>
+          <p>
+            📧 <strong>Email:</strong> <a href="mailto:support@chargingintelligence.app" style="color: var(--brand-primary);">support@chargingintelligence.app</a><br>
+            🌐 <strong>Web:</strong> <a href="https://chargingintelligence.app" style="color: var(--brand-primary);">https://chargingintelligence.app</a>
+          </p>
+        </div>
+
       </div>
     </div>
   </main>
