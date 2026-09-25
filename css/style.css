@@ -1536,21 +1536,30 @@ html[lang="en"] [lang="tr"] { display: none !important; }
 
 /* Fix overlap on very small screens */
 @media (max-width: 480px) {
-  .nav-brand-text span {
-    display: none; /* Hide "Intelligence" on small screens to save space */
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 12px 0;
+    gap: 12px;
   }
   .nav-brand-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+  .nav-brand-text span {
+    display: inline;
   }
   .nav-actions {
     gap: 8px;
+    width: 100%;
+    justify-content: center;
   }
   .nav-actions .btn-store {
-    padding: 4px 8px !important;
-    font-size: 0.75rem !important;
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
   }
   .nav-logo {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
   }
 }
