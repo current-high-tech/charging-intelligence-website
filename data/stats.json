@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T11:08:53Z",
+  "updatedAt": "2026-10-08T17:10:55Z",
   "summary": {
     "totalSocketsCombined": 348204,
     "totalSocketsTurkey": 46940,
@@ -10,8 +10,8 @@
     "ultraFastDcTurkey": 15886,
     "greenStationsTurkey": 7946,
     "epdkOperators": 183,
-    "ocmOperators": 1003,
-    "totalCombinedOperators": 1186,
+    "ocmOperators": 1008,
+    "totalCombinedOperators": 1191,
     "countriesCovered": 250,
     "europeDirectCountries": 53,
     "provincesCoveredTurkey": 81,
@@ -35,11 +35,11 @@
     "ocm": {
       "name": "Open Charge Map (OCM) Global Registry",
       "connected": true,
-      "operators": 1003,
+      "operators": 1008,
       "countries": 250,
       "connectionTypes": 43,
-      "turkeyPoints": 2275,
-      "turkeySockets": 3156
+      "turkeyPoints": 2281,
+      "turkeySockets": 3163
     }
   },
   "counters": [
@@ -61,7 +61,7 @@
     },
     {
       "id": "stat-operators",
-      "target": 1186,
+      "target": 1191,
       "suffix": "+",
       "label_tr": "Lisanslı & Global Ağ",
       "label_en": "EV Charging Networks"
