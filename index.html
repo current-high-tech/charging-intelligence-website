@@ -116,11 +116,15 @@
         <!-- Hero Visual Mockup -->
         <div class="hero-visual">
           <div class="hero-image-wrap">
-            <!-- Authentic iPhone Mockup with Live Demo Video -->
-            <div class="hero-phone-container" style="position: relative; background: transparent; border: none; box-shadow: none; padding: 0; overflow: visible; transition: transform 0.3s ease;">
-              <img src="assets/hero_iphone_mockup.png" alt="Charging Intelligence App Mockup" style="position: relative; z-index: 1; width: 100%; height: auto; display: block; filter: drop-shadow(0 25px 50px rgba(0,0,0,0.5));">
-              <video class="hero-mockup-video" autoplay loop muted playsinline style="position: absolute; top: 2.5%; left: 5%; width: 90%; height: 95%; z-index: 2; border-radius: 9%; object-fit: cover; pointer-events: none;" aria-label="Charging Intelligence App Demo">
-                <source src="assets/demo_video.mp4" type="video/mp4">
+            <div class="hero-phone-video-wrap">
+              <!-- Dark Theme Video (Hero_Screen.mp4) -->
+              <video class="hero-video hero-video-dark" autoplay loop muted playsinline preload="auto" aria-label="Charging Intelligence App Demo (Dark Mode)">
+                <source src="assets/Hero_Screen.mp4" type="video/mp4">
+              </video>
+
+              <!-- Light Theme Video (Hero_Screen-2.mp4) -->
+              <video class="hero-video hero-video-light" autoplay loop muted playsinline preload="auto" aria-label="Charging Intelligence App Demo (Light Mode)">
+                <source src="assets/Hero_Screen-2.mp4" type="video/mp4">
               </video>
             </div>
 

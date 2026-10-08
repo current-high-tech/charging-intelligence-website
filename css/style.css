@@ -488,6 +488,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  isolation: isolate;
 }
 
 /* AI Neon Pulsing Ambient Glow Behind Device */
@@ -508,56 +509,74 @@ img {
   );
   filter: blur(48px);
   border-radius: 50%;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
   animation: ai-neon-pulse 4s ease-in-out infinite alternate;
 }
 
 /* ==========================================================================
-   iPhone Mockup Frame (from Reference Photo)
+   Hero Phone Mockup & Video Demo (Dark & Light Mode)
    ========================================================================== */
 
-.hero-phone-container {
+.hero-phone-video-wrap {
   position: relative;
   width: 100%;
-  max-width: 320px;
+  max-width: 325px;
   margin: 0 auto;
-  z-index: 2;
-  border-radius: 46px;
-  padding: 8px;
-  background: linear-gradient(145deg, #2b2e38 0%, #16181d 100%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 
-    0 0 0 1px rgba(0, 0, 0, 0.8),
-    0 25px 50px -12px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(232, 37, 32, 0.25);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--transition-normal);
 }
 
-.hero-phone-container:hover {
+.hero-phone-video-wrap:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 
-    0 0 0 1px rgba(255, 255, 255, 0.28),
-    0 30px 60px -12px rgba(0, 0, 0, 0.6),
-    0 0 50px rgba(0, 229, 255, 0.35);
 }
 
-.hero-mockup-video {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1206 / 2622;
-  display: block;
-  border-radius: 38px;
-  object-fit: cover;
-  background: #0d1117;
+/* Realistic silhouette drop shadow matching the clipped iPhone contours */
+.hero-phone-video-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 6.76%;
+  right: 6.2%;
+  border-radius: 46px;
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.55);
+  z-index: -1;
+  pointer-events: none;
 }
 
-.hero-mockup-img {
+.hero-video {
   width: 100%;
   height: auto;
+  aspect-ratio: 1080 / 1920;
   display: block;
-  border-radius: 38px;
+  margin: 0 auto;
+  background: transparent;
+  pointer-events: none;
+  /* Precisely clip phone hardware body from the 1080x1920 video canvas */
+  clip-path: inset(0% 6.2% 0% 6.76% round 14.8% / 8.33%);
+  -webkit-clip-path: inset(0% 6.2% 0% 6.76% round 14.8% / 8.33%);
+}
+
+/* Light Mode (default): Show Hero_Screen-2.mp4, hide dark */
+.hero-video-dark {
+  display: none !important;
+}
+
+.hero-video-light {
+  display: block !important;
+}
+
+/* Dark Mode: Show Hero_Screen.mp4, hide light */
+[data-theme="dark"] .hero-video-dark {
+  display: block !important;
+}
+
+[data-theme="dark"] .hero-video-light {
+  display: none !important;
 }
 
 /* Floating telemetry badges */

@@ -254,6 +254,27 @@ function setTheme(theme) {
   if (themeIcon) {
     themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
   }
+
+  // Synchronize and play active theme video (Hero_Screen.mp4 vs Hero_Screen-2.mp4)
+  const darkVideo = document.querySelector('.hero-video-dark');
+  const lightVideo = document.querySelector('.hero-video-light');
+  if (darkVideo && lightVideo) {
+    if (theme === 'dark') {
+      try {
+        if (!isNaN(lightVideo.currentTime) && lightVideo.currentTime > 0) {
+          darkVideo.currentTime = lightVideo.currentTime;
+        }
+        darkVideo.play().catch(() => {});
+      } catch (e) {}
+    } else {
+      try {
+        if (!isNaN(darkVideo.currentTime) && darkVideo.currentTime > 0) {
+          lightVideo.currentTime = darkVideo.currentTime;
+        }
+        lightVideo.play().catch(() => {});
+      } catch (e) {}
+    }
+  }
 }
 
 // --- Toggle Theme ---
