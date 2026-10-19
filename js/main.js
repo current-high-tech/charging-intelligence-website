@@ -107,12 +107,12 @@ const i18nData = {
 
     // CTA Section
     "cta-title": "Yolculuklarınızı Akıllı Enerjiyle Güçlendirin",
-    "cta-desc": "Charging Intelligence uygulamasını şimdi indirin, menzil kaygısını geride bırakın.",
+    "cta-desc": "Siz nereye gitmek istediğinizi söyleyin, gerisini The Charging Intelligence halleder.",
     "cta-btn-apple": "App Store'dan İndirin",
     "cta-btn-google": "Google Play'den Edinin",
 
     // Footer
-    "footer-brand-desc": "Elektrikli araç sürücüleri için akıllı şarj ağı ve rota planlama platformu.",
+    "footer-brand-desc": "Elektrikli araç sürücüleri için akıllı şarj ağı ve rota planlama platformu. Siz nereye gitmek istediğinizi söyleyin, gerisini The Charging Intelligence halleder.",
     "footer-col-quick": "Hızlı Bağlantılar",
     "footer-col-legal": "Yasal & Güvenlik",
     "footer-col-contact": "İletişim",
@@ -219,12 +219,12 @@ const i18nData = {
 
     // CTA Section
     "cta-title": "Power Your Journeys with Smart Energy",
-    "cta-desc": "Download Charging Intelligence today and leave range anxiety in the rear-view mirror.",
+    "cta-desc": "Just tell us where to go. The Charging Intelligence handles the rest.",
     "cta-btn-apple": "Download on the App Store",
     "cta-btn-google": "Get it on Google Play",
 
     // Footer
-    "footer-brand-desc": "Next-generation smart EV charging companion and route planning platform.",
+    "footer-brand-desc": "Next-generation smart EV charging companion and route planning platform. Just tell us where to go. The Charging Intelligence handles the rest.",
     "footer-col-quick": "Quick Links",
     "footer-col-legal": "Legal & Security",
     "footer-col-contact": "Contact",
