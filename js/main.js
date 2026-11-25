@@ -21,6 +21,9 @@ const i18nData = {
     "nav-home": "← Ana Sayfa",
     "page-title-terms": "Kullanım Koşulları",
     "page-title-privacy": "Gizlilik Politikası",
+    "page-title-support": "Destek Merkezi",
+    "support-badge": "Yardım & İletişim",
+    "support-subtitle": "Size yardımcı olmaktan mutluluk duyarız.",
     "page-date": "Son Güncelleme: 20 Eylül 2026",
 
     // Hero Section
@@ -133,6 +136,9 @@ const i18nData = {
     "nav-home": "← Home",
     "page-title-terms": "Terms of Use",
     "page-title-privacy": "Privacy Policy",
+    "page-title-support": "Support Center",
+    "support-badge": "Help & Contact",
+    "support-subtitle": "We're happy to help you.",
     "page-date": "Last Updated: September 20, 2026",
 
     // Hero Section

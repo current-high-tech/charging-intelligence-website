@@ -7,7 +7,7 @@
   <meta name="description" content="Charging Intelligence support center, contact details and account deletion request guide.">
   
   <link rel="icon" type="image/png" href="assets/app_icon_512x512.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -21,7 +21,11 @@
         </a>
 
         <div class="nav-actions">
-          <a href="index.html" class="btn btn-store" style="padding: 6px 14px; font-size: 0.85rem;">
+          <div class="ctrl-pill" aria-label="Language Selector">
+            <button class="ctrl-btn lang-btn" data-lang="tr" aria-label="Türkçe">TR</button>
+            <button class="ctrl-btn lang-btn active" data-lang="en" aria-label="English">EN</button>
+          </div>
+          <a href="index.html" class="btn btn-store" style="padding: 6px 14px; font-size: 0.85rem;" data-i18n="nav-home">
             ← Home
           </a>
           <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
@@ -36,52 +40,102 @@
   <main class="container">
     <div class="legal-container">
       <header class="legal-page-header">
-        <span class="legal-badge">Yardım & İletişim</span>
-        <h1>Destek Merkezi (Support Center)</h1>
-        <p style="color: var(--text-dim); margin-top: 8px;">Size yardımcı olmaktan mutluluk duyarız.</p>
+        <span class="legal-badge" data-i18n="support-badge">Help & Contact</span>
+        <h1 data-i18n="page-title-support">Support Center</h1>
+        <p style="color: var(--text-dim); margin-top: 8px;" data-i18n="support-subtitle">We're happy to help you.</p>
       </header>
 
       <div class="legal-content">
-        <h2>Bize Ulaşın</h2>
-        <p>
-          Uygulama kullanımı, Apple CarPlay & Android Auto entegrasyonu, şarj istasyonu bildirimleri veya önerileriniz için destek ekibimize haftanın 7 günü ulaşabilirsiniz:
-        </p>
+        <!-- TR CONTENT -->
+        <div lang="tr">
+          <h2>Bize Ulaşın</h2>
+          <p>
+            Uygulama kullanımı, Apple CarPlay & Android Auto entegrasyonu, şarj istasyonu bildirimleri veya önerileriniz için destek ekibimize haftanın 7 günü ulaşabilirsiniz:
+          </p>
 
-        <div class="legal-card-info" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-          <div>
-            <strong style="font-size: 1.1rem; display: block; margin-bottom: 4px;">Resmi Destek E-postası:</strong>
-            <span style="color: var(--text-muted);">support@chargingintelligence.app</span>
+          <div class="legal-card-info" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <strong style="font-size: 1.1rem; display: block; margin-bottom: 4px;">Resmi Destek E-postası:</strong>
+              <span style="color: var(--text-muted);">support@chargingintelligence.app</span>
+            </div>
+            <a href="mailto:support@chargingintelligence.app" class="btn btn-primary" style="padding: 10px 20px;">
+              ✉️ E-posta Gönder
+            </a>
           </div>
-          <a href="mailto:support@chargingintelligence.app" class="btn btn-primary" style="padding: 10px 20px;">
-            ✉️ E-posta Gönder
-          </a>
+
+          <h2 style="margin-top: 40px;">Sık Karşılaşılan Sorunlar</h2>
+
+          <h3>1. Apple CarPlay veya Android Auto'da İstasyonlar Görünmüyor</h3>
+          <p>
+            Lütfen akıllı telefonunuzda Konum Servislerinin "Uygulamayı Kullanırken" veya "Her Zaman" olarak açık olduğundan emin olun. Aracınızın USB kablosunu veya kablosuz bağlantısını yeniden başlatıp bağlanmayı deneyin.
+          </p>
+
+          <h3>2. Bir İstasyonun Bilgisi Güncel Değil veya Arızalı</h3>
+          <p>
+            Uygulama içindeki istasyon detay ekranında yer alan "Hata Bildir" butonuna dokunabilir veya istasyon adı/konumu ile birlikte bize e-posta atabilirsiniz. Ekibimiz anında kontrol edip veriyi güncelleyecektir.
+          </p>
         </div>
 
-        <h2 style="margin-top: 40px;">Sık Karşılaşılan Sorunlar</h2>
-        
-        <h3>1. Apple CarPlay veya Android Auto'da İstasyonlar Görünmüyor</h3>
-        <p>
-          Lütfen akıllı telefonunuzda Konum Servislerinin "Uygulamayı Kullanırken" veya "Her Zaman" olarak açık olduğundan emin olun. Aracınızın USB kablosunu veya kablosuz bağlantısını yeniden başlatıp bağlanmayı deneyin.
-        </p>
+        <!-- EN CONTENT -->
+        <div lang="en">
+          <h2>Contact Us</h2>
+          <p>
+            You can reach our support team 7 days a week for app usage, Apple CarPlay & Android Auto integration, charging station reports, or any suggestions:
+          </p>
 
-        <h3>2. Bir İstasyonun Bilgisi Güncel Değil veya Arızalı</h3>
-        <p>
-          Uygulama içindeki istasyon detay ekranında yer alan "Hata Bildir" butonuna dokunabilir veya istasyon adı/konumu ile birlikte bize e-posta atabilirsiniz. Ekibimiz anında kontrol edip veriyi güncelleyecektir.
-        </p>
+          <div class="legal-card-info" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <strong style="font-size: 1.1rem; display: block; margin-bottom: 4px;">Official Support Email:</strong>
+              <span style="color: var(--text-muted);">support@chargingintelligence.app</span>
+            </div>
+            <a href="mailto:support@chargingintelligence.app" class="btn btn-primary" style="padding: 10px 20px;">
+              ✉️ Send Email
+            </a>
+          </div>
+
+          <h2 style="margin-top: 40px;">Common Issues</h2>
+
+          <h3>1. Stations Are Not Showing Up on Apple CarPlay or Android Auto</h3>
+          <p>
+            Please make sure Location Services on your smartphone are enabled and set to "While Using the App" or "Always". Try reconnecting your vehicle's USB cable or restarting the wireless connection.
+          </p>
+
+          <h3>2. A Station's Information Is Outdated or Out of Order</h3>
+          <p>
+            You can tap the "Report Issue" button on the station detail screen in the app, or send us an email with the station name and location. Our team will promptly verify and update the data.
+          </p>
+        </div>
 
         <!-- Account Deletion Section (Apple App Store & Google Play Mandatory) -->
         <div id="delete-account" style="scroll-margin-top: 100px; margin-top: 50px;">
-          <h2>Hesap ve Veri Silme Talebi (Account Deletion)</h2>
-          <p>
-            Apple App Store ve Google Play yönergeleri doğrultusunda, Charging Intelligence hesabınızı ve hesabınıza bağlı tüm verileri dilediğiniz an kalıcı olarak silebilirsiniz.
-          </p>
+          <div lang="tr">
+            <h2>Hesap ve Veri Silme Talebi</h2>
+            <p>
+              Apple App Store ve Google Play yönergeleri doğrultusunda, Charging Intelligence hesabınızı ve hesabınıza bağlı tüm verileri dilediğiniz an kalıcı olarak silebilirsiniz.
+            </p>
 
-          <div class="legal-card-info">
-            <h4 style="margin-bottom: 8px; color: var(--text-main);">Nasıl Hesap Silebilirsiniz?</h4>
-            <ul style="margin-bottom: 0;">
-              <li><strong>Uygulama İçinden:</strong> Profil > Ayarlar > "Hesabımı Sil" adımlarını takip ederek şifrenizi/onayınızı doğrulayıp anında silebilirsiniz.</li>
-              <li><strong>Web Üzerinden:</strong> Eğer uygulamaya erişiminiz yoksa, kayıtlı e-posta adresinizden <a href="mailto:support@chargingintelligence.app?subject=Hesap%20Silme%20Talebi" style="color: var(--brand-primary); font-weight: 700;">support@chargingintelligence.app</a> adresine <em>"Hesap Silme Talebi"</em> konulu bir e-posta gönderebilirsiniz. Talebiniz 48 saat içinde işleme alınıp tüm kullanıcı verileriniz kalıcı olarak imha edilecektir.</li>
-            </ul>
+            <div class="legal-card-info">
+              <h4 style="margin-bottom: 8px; color: var(--text-main);">Nasıl Hesap Silebilirsiniz?</h4>
+              <ul style="margin-bottom: 0;">
+                <li><strong>Uygulama İçinden:</strong> Profil &gt; Ayarlar &gt; "Hesabımı Sil" adımlarını takip ederek şifrenizi/onayınızı doğrulayıp anında silebilirsiniz.</li>
+                <li><strong>Web Üzerinden:</strong> Eğer uygulamaya erişiminiz yoksa, kayıtlı e-posta adresinizden <a href="mailto:support@chargingintelligence.app?subject=Hesap%20Silme%20Talebi" style="color: var(--brand-primary); font-weight: 700;">support@chargingintelligence.app</a> adresine <em>"Hesap Silme Talebi"</em> konulu bir e-posta gönderebilirsiniz. Talebiniz 48 saat içinde işleme alınıp tüm kullanıcı verileriniz kalıcı olarak imha edilecektir.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div lang="en">
+            <h2>Account and Data Deletion Request</h2>
+            <p>
+              In accordance with Apple App Store and Google Play guidelines, you can permanently delete your Charging Intelligence account and all associated data at any time.
+            </p>
+
+            <div class="legal-card-info">
+              <h4 style="margin-bottom: 8px; color: var(--text-main);">How to Delete Your Account?</h4>
+              <ul style="margin-bottom: 0;">
+                <li><strong>From the App:</strong> Follow Profile &gt; Settings &gt; "Delete Account", confirm your password/verification, and delete your account immediately.</li>
+                <li><strong>Via Web / Email:</strong> If you do not have access to the app, you can send an email from your registered email address to <a href="mailto:support@chargingintelligence.app?subject=Account%20Deletion%20Request" style="color: var(--brand-primary); font-weight: 700;">support@chargingintelligence.app</a> with the subject <em>"Account Deletion Request"</em>. Your request will be processed within 48 hours and all of your user data will be permanently deleted.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -91,10 +145,10 @@
   <!-- Footer -->
   <footer class="site-footer" style="padding: 30px 0;">
     <div class="container" style="text-align: center; color: var(--text-dim); font-size: 0.85rem;">
-      © 2026 Charging Intelligence. Tüm hakları saklıdır. | <a href="terms-of-use.html">Kullanım Koşulları (EULA)</a> | <a href="privacy.html">Gizlilik Politikası</a>
+      © 2026 Charging Intelligence. <span data-i18n="footer-rights">All rights reserved.</span> | <a href="terms-of-use.html" data-i18n="nav-terms">Terms of Use</a> | <a href="privacy.html" data-i18n="nav-privacy">Privacy Policy</a>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
